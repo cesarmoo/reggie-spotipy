@@ -66,7 +66,7 @@ def prompt_for_user_token(username, scope=None, client_id = None,
             complete the authorization.
 
         ''')
-        auth_url = sp_oauth.get_authorize_url()
+        auth_url = sp_oauth.get_authorize_url(show_dialog=True)
         try:
             import webbrowser
             webbrowser.open(auth_url)
